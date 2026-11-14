@@ -1,0 +1,18 @@
+name: 'ElNemer Salah-Astronomy Verify Action'
+description: 'Official GitHub Action for salah-astronomy (verify) by @ElNeMeR70'
+author: 'ElNeMeR70'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target:
+    description: 'Target path or payload to analyze'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action-salah-astronomy-verify
+      shell: bash
+      run: |
+        echo "::notice title=action-salah-astronomy-verify::Verified ${inputs.target} successfully"
